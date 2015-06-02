@@ -1,0 +1,483 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "unionDemo.c",
+			"settings":
+			{
+				"buffer_size": 373,
+				"line_ending": "Unix",
+				"name": "#include <stdio.h>"
+			}
+		},
+		{
+			"contents": "{\n    // All options in here can also be specified in your project settings\n    // with a prepended \"sublimegdb_\". You probably want to\n    // have something like this in your project settings:\n    //\n    // \"settings\":\n    // {\n    //      \"sublimegdb_workingdir\": \"${folder:${project_path:your_executable_name}}\",\n    //      // NOTE: You MUST provide --interpreter=mi for the plugin to work\n    //      \"sublimegdb_commandline\": \"gdb --interpreter=mi ./your_executable_name\"\n    //\n    // }\n    //\n    // ${home}, ${project_path:}, ${folder:}, ${file} and ${file_base_name}\n    // tokens can be used in 'workingdir', 'commandline', 'arguments' options.\n    //\n    // ${home} is replaced with the value of the HOME environment variable.\n    //\n    // ${project_path:} tries to find a file with the given name in all the registered project folders and\n    // returns the first file found, or the original file name if none is found.\n    // Example: ${project_path:main.cpp} tries to find a file named \"main.cpp\" relative\n    // to the current project's folders. If none is found, it is replaced with \"main.cpp\".\n    //\n    // ${folder:} is replaced with the dirname of the given path.\n    // Example: ${folder:/path/to/file} is replaced with \"/path/to\".\n    // \"workingdir\": \"/tmp\",\n    //\n    // ${file} is replaced with absolute path to currently open file (if any)\n    // Example: /home/user/main.cpp\n    //\n    // ${file_base_name} is replaced with name without extension of currently\n    // open file (if any)\n    // Example: replaced with \"main\" for file \"/home/user/main.cpp\"\n    \"workingdir\": \"notset\",\n\n    // NOTE: You MUST provide --interpreter=mi for the plugin to work\n    // \"commandline\": \"gdb --interpreter=mi ./executable\",\n    \"commandline\": \"notset\",\n\n    // Arguments for the program.\n    // Example: to run \"./executable foo bar\"\n    // \"arguments\": \"foo bar\"\n    // To provide user input (stdin) use\n    // \"arguments\": \"< input.dat\"\n    \"arguments\": \"\",\n\n    // The command to use to run the program.\n    // If you are attaching to a remote program, you\n    // probably want to change this to -exec-continue\n    \"exec_cmd\": \"-exec-run\",\n\n    // For the larger binaries with lot of shared libraries\n    // the loading within the gdb could take much longer.\n    // Configure the thread wait timeout by setting gdb_timeout\n    \"gdb_timeout\": 20,\n\n    // Define debugging window layout (window split)\n    // first define column/row separators, then refer to them to define cells\n    \"layout\":\n    {\n        \"cols\": [0.0, 0.33, 0.66, 1.0],\n        \"rows\": [0.0, 0.75, 1.0],\n        \"cells\":\n        [ // c1 r1 c2 r2\n            [0, 0, 3, 1], // -> (0.00, 0.00), (1.00, 0.75)\n            [0, 1, 1, 2], // -> (0.00, 0.75), (0.33, 1.00)\n            [1, 1, 2, 2], // -> (0.33, 0.75), (0.66, 1.00)\n            [2, 1, 3, 2]  // -> (0.66, 0.75), (1.00, 1.00)\n        ]\n    },\n\n    // visual stuff\n    \"breakpoint_scope\": \"keyword.gdb\",\n    \"breakpoint_icon\": \"circle\",\n    \"position_scope\": \"entity.name.class\",\n    \"position_icon\": \"bookmark\",\n    \"changed_variable_scope\": \"entity.name.class\",\n    \"changed_variable_icon\": \"\",\n\n    // The group used for opening files\n    \"file_group\": 0,\n\n    \"session_group\": 1,\n    \"session_open\": true,\n\n    \"console_group\": 1,\n    \"console_open\": true,\n\n    \"variables_group\": 1,\n    \"variables_open\": true,\n\n    \"callstack_group\": 2,\n    \"callstack_open\": true,\n\n    \"registers_group\": 2,\n    \"registers_open\": false,\n\n    \"disassembly_group\": 2,\n    \"disassembly_open\": false,\n    // Set to \"intel\" for intel disassembly flavor. All other\n    // values default to using \"att\" flavor.\n    \"disassembly_flavor\": \"intel\",\n\n    \"threads_group\": 3,\n    \"threads_open\": true,\n\n    \"breakpoints_group\": 3,\n    \"breakpoints_open\": true,\n\n    // If set to true will push the layout before debugging\n    // and pop it when debugging ends\n    \"push_pop_layout\": true,\n\n    // If set to true will close the gdb views when the\n    // debugging session ends\n    \"close_views\": true,\n\n    // File to optionally write all the raw data read from and written to the gdb session and the inferior program.\n    // Setting it to \"stdout\" will write the output to the python console\n    \"debug_file\": \"stdout\",\n\n    // Add \"pending breakpoints\" for symbols that are dynamically loaded from\n    // external shared libraries\n    \"debug_ext\" : false,\n\n    // Whether to log the raw data read from and written to the gdb session and the inferior program.\n    \"debug\": true,\n\n    // Disables showing the error message dialog when something goes wrong\n    \"i_know_how_to_use_gdb_thank_you_very_much\": false\n}\n",
+			"file": "/home/mike/.config/sublime-text-3/Packages/SublimeGDB/SublimeGDB.sublime-settings",
+			"file_size": -1,
+			"file_write_time": -1,
+			"settings":
+			{
+				"buffer_size": 4634,
+				"line_ending": "Unix",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"file": "Makefile",
+			"settings":
+			{
+				"buffer_size": 172,
+				"line_ending": "Unix",
+				"name": "unionDemo : unionDemo.o"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "gdb",
+		"selected_items":
+		[
+			[
+				"gdb",
+				"Preferences: SublimeGDB Settings – Default"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 507.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by) "
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/mike/Documents/cPrograms"
+	],
+	"file_history":
+	[
+		"/home/mike/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/mike/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "unionDemo.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 373,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								89,
+								89
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_name": "#include <stdio.h>",
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"syntax": "Packages/C++/C++.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/mike/.config/sublime-text-3/Packages/SublimeGDB/SublimeGDB.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4634,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4634,
+								4634
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_complete": true,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"syntax": "Packages/JavaScript/JSON.tmLanguage"
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Makefile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 172,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								172,
+								172
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"auto_name": "unionDemo : unionDemo.o",
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content"
+							],
+							"syntax": "Packages/Makefile/Makefile.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 36.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "unionDemoP.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

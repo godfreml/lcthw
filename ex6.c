@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 
 	printf("int i = %d\n", i);
 	printf("float f = %f\n", f);
-	printf("double d = %d\n", d);
+	printf("double d = %f\n", d);
 
 	printf("first name = %s\n", fname);
 	printf("last name = %s\n", lname);
